@@ -7,6 +7,7 @@
 body{
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.2em;
+    background: linear-gradient(90deg, rgba(193,232,228,1) 0%, rgba(123,222,221,0.7567401960784313) 48%, rgba(100,208,230,0.8015581232492998) 100%);
 }
 
 header{
@@ -71,7 +72,7 @@ nav ul li a:hover{
 }
 
 .ejemplo{
-    padding: 30px 10px;
+    padding: 30px 20px;
 }
 
 footer{
