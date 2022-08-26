@@ -53,6 +53,12 @@ main{
         }
     }
 
+    @mixin detalle ($padd, $altura, $color){
+        padding: $padd;
+        height: $altura;
+        background-color: $color;
+    }
+
     .logo{
         display: flex;
         align-items: center;    
@@ -64,8 +70,7 @@ main{
     }
     
     .call{
-        height: 500px;
-        background-color: aqua;
+        @include detalle(10px,500px,aqua )
     }
     
     .article{
@@ -74,6 +79,13 @@ main{
         background-color: blueviolet;
     }
     
+    .article--nueva{
+        @extend .article;
+        background-color: beige;
+        padding: 10px;
+        color:black;
+    }
+
     .ejemplo{
         padding: 30px 20px;
     }
@@ -84,3 +96,24 @@ main{
         text-align: center;
         width: 100%;
     }
+
+    $redes: (
+        20px:rgb(255, 85, 85),
+        22px:rgb(233, 114, 78),
+        24px:rgb(252, 206, 106),
+        26px:rgb(250, 225, 86) 
+    );
+
+    @each $siz, $col in $redes {
+        .cuadro--#{$siz} {
+            height: 60px;
+            width: 100px;
+            color: $col;
+            font-size: $siz;
+            border-radius: 12px;
+            box-shadow: 13px inset rgb(202, 63, 236);
+            background-color: cadetblue;
+            display:inline-flex;
+        }
+    }
+
